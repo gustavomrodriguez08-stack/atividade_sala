@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escola de Tecnologia</title>
+
+  <!-- Bootstrap 5.3.8 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap Icons 1.13.1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-mortarboard-fill text-primary"></i> TechCursos
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#turmas">Turmas</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mais</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#inscricao">Inscrição</a></li>
+              <li><a class="dropdown-item" href="#faq">Perguntas frequentes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Contato</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar curso" aria-label="Buscar">
+          <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+
+        <!-- Carrinho + Entrar: ficam depois do ul.me-auto, então sempre na extrema direita -->
+        <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 ms-lg-3">
+          <a href="#" class="btn btn-outline-secondary position-relative" aria-label="Carrinho">
+            <i class="bi bi-cart3"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              3
+              <span class="visually-hidden">itens no carrinho</span>
+            </span>
+          </a>
+          <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Entrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DESTAQUE -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container py-4">
+      <h1 class="display-4 fw-bold">Aprenda tecnologia do zero ao mercado</h1>
+      <p class="lead mb-4">Cursos práticos, turmas pequenas e professores que atuam na área.</p>
+      <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#modalMatricula">Quero me matricular</button>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- GRADE DE CARDS -->
+    <section id="cursos" class="mb-5">
+      <h2 class="mb-4">Nossos cursos</h2>
+      <div class="row g-4">
+
+        <!-- CARD EM DESTAQUE: igual aos demais até sm, dobro da largura a partir de lg -->
+        <div class="col-12 col-sm-6 col-lg-8">
+          <div class="card h-100 border-primary border-2 shadow">
+            <div class="card-header text-bg-primary d-flex justify-content-between align-items-center">
+              <span class="fw-bold">Plano Completo</span>
+              <span class="badge text-bg-warning"><i class="bi bi-star-fill"></i> Mais popular</span>
+            </div>
+            <div class="card-body">
+              <i class="bi bi-trophy-fill fs-1 text-primary"></i>
+              <h5 class="card-title mt-2">Todos os cursos em um só plano</h5>
+              <p class="card-text">Acesso a todas as turmas, mentoria individual e certificado de conclusão.</p>
+              <p class="display-6 fw-bold mb-0">R$ 199<small class="fs-6 text-body-secondary">/mês</small></p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary btn-lg">Assinar plano</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-filetype-html fs-1 text-primary"></i>
+              <h5 class="card-title mt-2">HTML e CSS</h5>
+              <p class="card-text">Estrutura e estilo de páginas web modernas e responsivas.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-filetype-js fs-1 text-warning"></i>
+              <h5 class="card-title mt-2">JavaScript</h5>
+              <p class="card-text">Lógica de programação e interatividade no navegador, com exercícios práticos do básico ao avançado.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-database fs-1 text-success"></i>
+              <h5 class="card-title mt-2">Banco de Dados</h5>
+              <p class="card-text">Modelagem e consultas SQL.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-phone fs-1 text-info"></i>
+              <h5 class="card-title mt-2">Design Responsivo</h5>
+              <p class="card-text">Layouts que se adaptam a celulares, tablets e computadores usando Bootstrap.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-git fs-1 text-danger"></i>
+              <h5 class="card-title mt-2">Git e GitHub</h5>
+              <p class="card-text">Controle de versão e trabalho em equipe.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-shield-lock fs-1 text-secondary"></i>
+              <h5 class="card-title mt-2">Segurança Digital</h5>
+              <p class="card-text">Boas práticas para proteger dados, contas e aplicações contra os ataques mais comuns.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-braces fs-1 text-dark"></i>
+              <h5 class="card-title mt-2">Lógica de Programação</h5>
+              <p class="card-text">Algoritmos e raciocínio lógico para quem está começando.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="#inscricao" class="btn btn-primary">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TABELA DE TURMAS -->
+    <section id="turmas" class="mb-5">
+      <h2 class="mb-4">Turmas abertas</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Turma</th>
+              <th scope="col">Curso</th>
+              <th scope="col">Dias</th>
+              <th scope="col">Horário</th>
+              <th scope="col">Vagas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">A1</th><td>HTML e CSS</td><td>Seg e Qua</td><td>19h às 21h</td><td>12</td></tr>
+            <tr><th scope="row">B1</th><td>JavaScript</td><td>Ter e Qui</td><td>19h às 21h</td><td>8</td></tr>
+            <tr><th scope="row">C1</th><td>Banco de Dados</td><td>Sábado</td><td>8h às 12h</td><td>15</td></tr>
+            <tr><th scope="row">D1</th><td>Design Responsivo</td><td>Seg e Qua</td><td>14h às 16h</td><td>5</td></tr>
+            <tr><th scope="row">E1</th><td>Git e GitHub</td><td>Sexta</td><td>19h às 22h</td><td>20</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES: data-bs-parent faz só um item ficar aberto por vez -->
+    <section id="faq" class="mb-5">
+      <h2 class="mb-4">Perguntas frequentes</h2>
+      <div class="accordion" id="accordionFaq">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              Preciso ter experiência para começar?
+            </button>
+          </h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+            <div class="accordion-body">Não. As turmas iniciais partem do zero e o conteúdo avança aos poucos.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              As aulas são presenciais ou online?
+            </button>
+          </h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+            <div class="accordion-body">As duas opções existem. O formato de cada turma aparece na tabela de turmas abertas.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              Recebo certificado ao final?
+            </button>
+          </h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+            <div class="accordion-body">Sim, quem concluir o curso com a frequência mínima recebe certificado.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              Posso trocar de turma depois de me matricular?
+            </button>
+          </h3>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+            <div class="accordion-body">Pode, desde que haja vaga na turma desejada. Basta pedir antes da segunda semana de aula.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE INSCRIÇÃO -->
+    <section id="inscricao">
+      <h2 class="mb-4">Inscrição</h2>
+      <form class="row g-3">
+
+        <div class="col-12 col-md-6">
+          <label for="nome" class="form-label">Nome completo</label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <input type="email" class="form-control" id="email" placeholder="voce@email.com" required>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="usuario" class="form-label">Usuário</label>
+          <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="usuario" placeholder="usuario">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="turma" class="form-label">Turma</label>
+          <select class="form-select" id="turma" required>
+            <option value="" selected>Escolha uma turma...</option>
+            <option>A1 - HTML e CSS</option>
+            <option>B1 - JavaScript</option>
+            <option>C1 - Banco de Dados</option>
+            <option>D1 - Design Responsivo</option>
+            <option>E1 - Git e GitHub</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="novidades">
+            <label class="form-check-label" for="novidades">Quero receber novidades por e-mail</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="termos" required>
+            <label class="form-check-label" for="termos">Li e aceito os termos de uso</label>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Enviar inscrição</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer data-bs-theme="dark" class="bg-body text-body-secondary py-4">
+    <div class="container text-center">
+      <div class="fs-4 mb-2">
+        <a href="#" class="text-body-secondary me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-body-secondary me-3" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" class="text-body-secondary me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="text-body-secondary" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <p class="mb-0"><i class="bi bi-c-circle"></i> 2026 TechCursos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE MATRÍCULA -->
+  <div class="modal fade" id="modalMatricula" tabindex="-1" aria-labelledby="tituloMatricula" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="tituloMatricula"><i class="bi bi-mortarboard"></i> Matrícula</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formMatricula" class="row g-3">
+            <div class="col-12">
+              <label for="mNome" class="form-label">Nome completo</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="mNome" placeholder="Seu nome" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="mEmail" class="form-label">E-mail</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control" id="mEmail" placeholder="voce@email.com" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="mTelefone" class="form-label">Telefone</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                <input type="tel" class="form-control" id="mTelefone" placeholder="(45) 99999-9999">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" form="formMatricula" class="btn btn-primary">Matricular</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (inclui o Popper, necessário para o dropdown e o menu sanduíche) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--
+
+1) Por que col-12 col-sm-6 col-lg-4 produz um resultado diferente de col-4 sozinho?
+Resposta: Porque col-12 col-sm-6 col-lg-4 deixa layout responsivo dependendo da quantidade de coluna e 
+também de acordo com o tamanho da tela. Já col-4 mantém o memso tamanho independente se a tela é maior ou menor. 
+
+2) O que acontece com a sua grade se a soma das colunas de uma row passar de 12? Isso é erro?
+Resposta: O que não couber na linha é posicionado na linha seguinte. Não é erro.
+
+3) Qual a diferença prática entre .container e .container-fluid na sua página?
+Resposta: O .container mantém o centralizado e tem a largura maxima que varia de acordo com o tamanho da tela e o 
+.container-fluid ocupa 100% da largura ficando ponta a ponta
+
+4) Onde você usou data-bs-target e qual elemento cada um deles aponta?
+Resposta: Usei o data-bs-target na navbar, no botão "Ver cursos" e nas perguntas do accordion. 
+Na navbar o botão que abre o menu responsivo aponta para #navbarSupportedContent a div que guarda o menu responsivo. 
+No botão "Ver cursos" aponta para #modalMatricula a div do modal de matrícula. 
+No accordion os três botões apontam para #pergunta1, #pergunta2 e #pergunta3 as divs que guardam a resposta de cada pergunta. 
+Os itens também usam data-bs-parent="#faq" para abrir somente uma pergunta por vez.
+
+5) Três classes da apostila de 2022 que hoje estão descontinuadas — e por quais foram substituídas?
+Resposta: .text-muted por .text-body-secondary
+.navbar-dark por data-bs-theme="dark"
+.pl-* e .pr-* por .ps-* e .pe-*
+
+6) Se o bootstrap.bundle.min.js não carregar, quais partes da sua página param de funcionar e quais continuam?
+Resposta: Se o bootstrap.bundle.min.js não carregar os estilos do Bootstrap continuam funcionando,
+mas os componentes que dependem de JavaScript deixam de funcionar como o Navbar responsivo, Modal, Dropdown e Accordion.
+
+-->
